@@ -31,7 +31,7 @@ services:
     volumes:
       - ./src:/var/www/html:delegated
     ports:
-      - "5434:5434"
+      - "5432:5434"
     networks:
       - laravel
     restart: unless-stopped
@@ -71,33 +71,6 @@ services:
       SERVICE_NAME: mysql
     networks:
       - laravel
-
-  #  postgres:
-  #    image: postgres:14-alpine
-  #    container_name: postgres
-  #    restart: unless-stopped
-  #    tty: true
-  #    environment:
-  #      TZ: 'Asia/Tashkent'
-  #      POSTGRES_USER: 'postgres'
-  #      POSTGRES_PASSWORD: '8KBVRQbfM5qiZNBz'
-  #      POSTGRES_DB: 'humdon'
-  #    ports:
-  #      - "5432:5432"
-  #    networks:
-  #      - laravel
-  #
-  #  pgadmin:
-  #    image: dpage/pgadmin4
-  #    environment:
-  #      PGADMIN_DEFAULT_EMAIL: humdon@gmail.com
-  #      PGADMIN_DEFAULT_PASSWORD: 8KBVRQbfM5qiZNBz
-  #    ports:
-  #      - "8081:80"
-  #    links:
-  #      - postgres
-  #    depends_on:
-  #      - postgres
 
   php:
     build:
