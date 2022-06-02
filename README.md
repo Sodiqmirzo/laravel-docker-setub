@@ -15,7 +15,7 @@ Do not exits installed apps run this.
 - `docker-compose run --rm npm run dev`
 - `docker-compose run --rm artisan migrate` 
 
-## Persistent MySQL Storage
+## Persistent MySQL Storage.
 
 ```
 volumes:
